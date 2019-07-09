@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-1. Clone Repository - Clone the repo using the git software of your choice or using the git command git clone `https://github.com/qingzhouyang/csnoob-client.git`
+1. Clone Repository - Clone the repo using the git software of your choice or using the git command 
+`git clone https://github.com/qingzhouyang/csnoob-client.git`
 
 2. Install NPM Dependencies: `npm install`
 
