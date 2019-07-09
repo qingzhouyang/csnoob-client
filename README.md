@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
+## Useful links
+
+Bootstrap theme: <https://bootswatch.com/slate/>
+
 ## Development server
 
 1. Clone Repository - Clone the repo using the git software of your choice or using the git command 
