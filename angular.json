@@ -7,11 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-<<<<<<< HEAD
-          "style": "sass"
-=======
           "style": "scss"
->>>>>>> initial commit
         }
       },
       "root": "",
@@ -32,11 +28,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "src/styles.sass"
-=======
               "src/styles.scss"
->>>>>>> initial commit
             ],
             "scripts": []
           },
