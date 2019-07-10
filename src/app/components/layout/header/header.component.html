@@ -1,22 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Eventhub</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/special" routerLinkActive="active">Members</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-        <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
-      </ul>
-    </div>
-  </nav>
+
+      <!-- <div>
+        <button pButton label="Sign up" class="button-style"></button>
+        <button pButton label="Log in"  class="button-style"></button>
+      </div> -->
+
+      <p-menubar>
+              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/signup">Sign up</a></span>
+              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/login">Log in</a></span>
+              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/more">more</a></span>
+      </p-menubar>
+      
+<div class="content-section implementation">
+  <p-menubar [model]="items"></p-menubar>
+</div>
