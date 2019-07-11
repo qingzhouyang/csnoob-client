@@ -1,8 +1,8 @@
 # Todo list
 
 ## High priority
-- [ ] side nav bar
 - [ ] top menu
+- [ ] item menu
 - [ ] footer
 - [ ] item card
 - [ ] item card list block
@@ -11,6 +11,7 @@
 - [ ] http item request 
 
 ## Low priority
+- [ ] side nav bar
 - [ ] item transaction history component
 - [ ] member page
 - [ ] translation
