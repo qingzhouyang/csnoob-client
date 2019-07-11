@@ -4,12 +4,21 @@
         <button pButton label="Log in"  class="button-style"></button>
       </div> -->
 
-      <p-menubar>
-              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/signup">Sign up</a></span>
-              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/login">Log in</a></span>
-              <span class="header-text-style" routerLinkActive = "active"><a routerLink="/more">more</a></span>
-      </p-menubar>
-      
-<div class="content-section implementation">
-  <p-menubar [model]="items"></p-menubar>
-</div>
+      <nav>
+        <ul>
+          <li class="upper"><a routerLink="/more">more</a></li>
+          <li class="upper"><a routerLink="/login">Log in</a></li>
+          <li class="upper"><a routerLink="/signup">Sign up</a></li>
+        </ul>
+      </nav>
+
+      <nav>
+          <ul>
+            <li class="lower"><a routerLink="/A">Title A</a></li>
+            <li class="lower"><a routerLink="/B">Title B</a></li>
+            <li class="lower"><a routerLink="/C">Title C</a></li>
+            <li class="lower"><a routerLink="/D">Title D</a></li>
+            <li class="lower"><a routerLink="/E">Title E</a></li>
+          </ul>
+        </nav>
+  
