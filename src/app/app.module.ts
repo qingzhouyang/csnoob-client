@@ -12,6 +12,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 //primeng modules
 import { MenubarModule } from 'primeng/components/menubar/menubar';
 import { ButtonModule } from 'primeng/components/button/button';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -20,7 +21,8 @@ import { ButtonModule } from 'primeng/components/button/button';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
