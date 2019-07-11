@@ -1,3 +1,24 @@
+# Todo list
+
+## High priority
+- [ ] side nav bar
+- [ ] top menu
+- [ ] footer
+- [ ] item card
+- [ ] item card list block
+
+- [ ] menu navigation router
+- [ ] http item request 
+
+## Low priority
+- [ ] item transaction history component
+- [ ] member page
+
+- [ ] register/login service
+- [ ] guard
+
+
+
 # CsnoobClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
