@@ -1,9 +1,11 @@
+@import '../../../../variables';
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2e333b;
+    background-color: $primary;
   }
   
   li.upper {
@@ -16,7 +18,7 @@ ul {
   
   li a {
     display: block;
-    color: white;
+    color: $white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -24,5 +26,5 @@ ul {
   }
   
   li a:hover {
-    background-color: #3d4552;
+    background-color: $secondary;
   }
