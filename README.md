@@ -13,6 +13,7 @@
 ## Low priority
 - [ ] item transaction history component
 - [ ] member page
+- [ ] translation
 
 - [ ] register/login service
 - [ ] guard
