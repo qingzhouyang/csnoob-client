@@ -4,6 +4,7 @@
 - [ ] top menu
 - [ ] item menu
 - [ ] footer
+- [ ] side background
 - [ ] item card
 - [ ] item card list block
 
