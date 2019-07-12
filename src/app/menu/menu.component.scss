@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.nav-tabs {
+    background-color: $primary;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.nav-link {
+    background-image: url('../../../images/gun1.png');
+    background-repeat: no-repeat;
+    background-size: 55px 30px;
+    background-position: 35px 5px;
+    height: 60px !important;
+    padding: 20px !important;
+    padding-top: 40px !important;
+    line-height: 20px !important;
+    line-height: 1 !important;
+    text-align: center;
+}
