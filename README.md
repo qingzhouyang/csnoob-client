@@ -1,9 +1,9 @@
 # Todo list
 
 ## High priority
-- [ ] top menu
-- [ ] item menu
-- [ ] footer
+- [x] top menu
+- [x] item menu
+- [x] footer (details TBC)
 - [ ] side background
 - [ ] item card
 - [ ] item card list block
