@@ -1,5 +1,5 @@
-<form>  
-        <!-- Modal -->
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)" autocomplete="off">
+     <!-- Modal -->
         <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -9,25 +9,36 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">           
-                  <!-- <form> -->
+              <div class="modal-body">   
                       <fieldset>
                         <div class="form-group">
                           <label for="email">Email address</label>
-                          <input type="email" required class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                          <input formControlName="email"
+                                 type="email" 
+                                 class="form-control" 
+                                 id="email"
+                                 aria-describedby="emailHelp" 
+                                 laceholder="Enter email">
+                          <div *ngIf="messageForm.controls.email.touched && !messageForm.controls.email.valid">
+                                <div class="error">The email is invalid!</div>
+                          </div> 
                           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                           <label for="password">Password</label>
-                          <input type="password" required class="form-control" id="password" placeholder="Password">
-                        </div>                                           
+                          <input formControlName="password"
+                                 type="password" 
+                                 class="form-control" 
+                                 id="password"
+                                 placeholder="Password">
+                        </div>                  
                       </fieldset>
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary">Login</button>
-                <button type="reset"  class="btn btn-secondary">Clear</button>
+                    <button type="submit" class="btn btn-secondary" [disabled]="!messageForm.valid">Login</button>
+                    <button type="reset"  class="btn btn-secondary">Clear</button>
               </div>
             </div>
           </div>
         </div>
-      </form>  
+</form>
