@@ -14,8 +14,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.messageForm = this.formBuilder.group({
-      email: [' ', Validators.compose([Validators.required, Validators.minLength(1)])],
-      password: [' ', Validators.required]
+      // email: [' ', Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.email, Validators.minLength(3)])],
+      password: ['', Validators.required]
     });
    }
 
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
+    this.messageForm.reset();
     if(this.messageForm.invalid){
       return;
     }
