@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './components/layout/header/login/login/login.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './components/layout/menu/menu.component';
 
 //primeng modules
 import { MenubarModule } from 'primeng/components/menubar/menubar';
