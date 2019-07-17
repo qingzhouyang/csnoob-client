@@ -10,26 +10,30 @@ export class LoginComponent implements OnInit {
 
   messageForm: FormGroup;
   submitted = false;
-  success = false; 
+  emailReg = '.+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$';
+  
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder) { 
     this.messageForm = this.formBuilder.group({
-      // email: [' ', Validators.required],
-      email: ['', Validators.compose([Validators.required, Validators.email, Validators.minLength(3)])],
-      password: ['', Validators.required]
+      email: ['', Validators.compose([Validators.required, Validators.pattern(this.emailReg)])],
+      // email: ['', Validators.compose([Validators.required, Validators.email, Validators.minLength(3)])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
-   }
-
-  ngOnInit() {
   }
+
+  ngOnInit() { }
 
   onSubmit() {
     this.submitted = true;
     this.messageForm.reset();
-    if(this.messageForm.invalid){
+    if (this.messageForm.invalid) {
       return;
-    }
-    this.success = true;
+  }
+  }
+
+  onClose() {
+    console.log(this.messageForm);
+    this.messageForm.reset();
   }
 
 }
