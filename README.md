@@ -3,7 +3,7 @@
 ## High priority
 - [x] top menu
 - [x] item menu
-- [x] footer (details TBC)
+- [x] footer
 - [ ] side background
 - [ ] item card
 - [ ] item card list block
