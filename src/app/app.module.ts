@@ -12,12 +12,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { LogoutComponent } from'./components/logout/logout.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
-
-//primeng modules
-import { MenubarModule } from 'primeng/components/menubar/menubar';
-import { ButtonModule } from 'primeng/components/button/button';
-import { fromEventPattern } from 'rxjs';
 import { RegisterComponent } from './components/register/register.component';
 
 
@@ -30,13 +26,12 @@ import { RegisterComponent } from './components/register/register.component';
     CarouselComponent,
     MenuComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MenubarModule,
-    ButtonModule,
     ReactiveFormsModule,
     FormsModule
   ],

@@ -15,8 +15,7 @@
                              <label for="firstName">First Name</label>
                              <input formControlName="firstName"
                                     type="text" 
-                                    class="form-control" 
-                                    id="firstName"
+                                    class="form-control"
                                     placeholder="Enter First Name"/>
                                     <ng-container *ngIf="messageForm.get('firstName').invalid && messageForm.get('firstName').dirty">
                                        <div class="error" *ngIf="messageForm.get('firstName').hasError('required')">
@@ -28,8 +27,7 @@
                               <label for="lastName">Last Name</label>
                               <input formControlName="lastName"
                                      type="text" 
-                                     class="form-control" 
-                                     id="lastName"
+                                     class="form-control"
                                      placeholder="Enter Last Name"/>
                                      <ng-container *ngIf="messageForm.get('lastName').invalid && messageForm.get('lastName').dirty">
                                         <div class="error" *ngIf="messageForm.get('lastName').hasError('required')">
@@ -38,6 +36,18 @@
                                      </ng-container>
                            </div>
                            <div class="form-group">
+                              <label for="userName">Username</label>
+                              <input formControlName="userName"
+                                     type="text" 
+                                     class="form-control"
+                                     placeholder="Enter Username"/>
+                                     <ng-container *ngIf="messageForm.get('userName').invalid && messageForm.get('userName').dirty">
+                                        <div class="error" *ngIf="messageForm.get('userName').hasError('required')">
+                                          Required...
+                                        </div>
+                                     </ng-container>
+                           </div>
+                           <!-- <div class="form-group">
                               <label for="email">Email address</label>
                               <input formControlName="email"
                                      type="text" 
@@ -52,13 +62,12 @@
                                           Pattern Not valid
                                         </div>
                                         </ng-container>
-                           </div>
+                           </div> -->
                            <div class="form-group">
                              <label for="password">Password</label>
                              <input formControlName="password"
                                     type="password" 
-                                    class="form-control" 
-                                    id="password"
+                                    class="form-control"
                                     placeholder="Password"/>
                                     <ng-container *ngIf="messageForm.get('password').invalid && messageForm.get('password').dirty">
                                        <div class="error" *ngIf="messageForm.get('password').hasError('required')">
@@ -72,7 +81,7 @@
                          </fieldset>
                  </div>
                  <div class="modal-footer">
-                       <button type="submit" class="btn btn-secondary" [disabled]="messageForm.invalid">Register</button>
+                       <button type="submit" class="btn btn-secondary" [disabled]="messageForm.invalid" (click)="createUser()">Register</button>
                        <button type="reset"  class="btn btn-secondary">Clear</button>
                  </div>
                </div>
