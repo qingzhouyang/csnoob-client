@@ -1,8 +1,11 @@
 <div class="card-list-wrapper">
-    
-    <app-skin-item
-    *ngFor = 'let skin of skins'
-    [skinItem] = 'skin'
-    >
-</app-skin-item>
+    <div class="row">
+
+        <ng-container *ngFor='let skin of skins'>
+            <div class="col-md-4">
+                <app-skin-item [skinItem]='skin'>
+                </app-skin-item>
+            </div>
+        </ng-container>
+    </div>
 </div>
