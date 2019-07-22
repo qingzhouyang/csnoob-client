@@ -21,6 +21,8 @@ import { fromEventPattern } from 'rxjs';
 import { RegisterComponent } from './components/register/register.component';
 
 
+import { SkinItemComponent } from './components/skin-item/skin-item.component';
+import { SkinItemListComponent } from './components/skin-item-list/skin-item-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { RegisterComponent } from './components/register/register.component';
     CarouselComponent,
     MenuComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SkinItemComponent,
+    SkinItemListComponent
   ],
   imports: [
     BrowserModule,
