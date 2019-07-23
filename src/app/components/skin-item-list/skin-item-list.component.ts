@@ -17,51 +17,51 @@ export class SkinItemListComponent implements OnInit {
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 3,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 4,
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 5,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 6,
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 7,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 8,
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 9,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 10,
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 11,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 12,
       name: 'skin2',
       price: 50,
      },    {    
-      id: 1,
+      id: 13,
       name: 'skin1',
       price: 40,
      },{
-      id: 2,
+      id: 14,
       name: 'skin2',
       price: 50,
      }

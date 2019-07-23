@@ -1,11 +1,15 @@
+@import '../../../variables';
+
 .card-list-wrapper{
-    margin: auto;
+    margin: 15px auto;
     max-width: 1400px;
-    min-width: 360px;
+    min-width: 460px;
     padding: 10px;
+    padding-left: 30px;
     
     //display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+ //   flex-wrap: wrap;
+  //  justify-content: space-evenly;
+    background-color: $gray-800;
 
 }
