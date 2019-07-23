@@ -4,9 +4,10 @@
 - [x] top menu
 - [x] item menu
 - [x] footer
-- [ ] side background
-- [ ] item card
+- [x] side background
+- [x] item card
 - [ ] item card list block
+- [ ] translation
 
 - [ ] menu navigation router
 - [ ] http item request 
