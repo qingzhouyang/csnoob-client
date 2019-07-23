@@ -3,10 +3,12 @@
 ## High priority
 - [x] top menu
 - [x] item menu
-- [x] footer (details TBC)
-- [ ] side background
-- [ ] item card
+- [x] footer
+- [x] side background
+- [x] item card
 - [ ] item card list block
+- [ ] translation
+- [ ] item dashboard component
 
 - [ ] menu navigation router
 - [ ] http item request 

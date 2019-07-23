@@ -1,0 +1,21 @@
+
+    .card-wrapper{
+        
+        width: 250px;
+        height: auto;
+        padding: 3px;
+        margin: 20px; 
+        border: 2px solid black;
+
+        .pointer-image{
+            cursor: pointer;
+            .img-center{
+                height: 150px;
+                width: 97%;
+                display: block;
+                margin: 5px auto;
+            }
+        }
+            
+        
+    }
