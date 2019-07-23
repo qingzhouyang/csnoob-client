@@ -28,6 +28,8 @@ import { SkinItemListComponent } from './components/skin-item-list/skin-item-lis
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { PriceChartComponent } from './components/dashboard/price-chart/price-chart.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -44,7 +46,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginComponent,
     RegisterComponent,
     SkinItemComponent,
-    SkinItemListComponent
+    SkinItemListComponent,
+    DashboardComponent,
+    PriceChartComponent
   ],
   imports: [
     BrowserModule,
