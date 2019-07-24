@@ -8,7 +8,10 @@
 - [x] item card
 - [ ] item card list block
 - [ ] translation
+<<<<<<< HEAD
 - [ ] item dashboard component
+=======
+>>>>>>> 4404d0b2b5fdae1752728d2dd79cff287dcc6211
 
 - [ ] menu navigation router
 - [ ] http item request 
