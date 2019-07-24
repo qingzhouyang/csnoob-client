@@ -1,10 +1,10 @@
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)" autocomplete="off">
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()" autocomplete="off">
         <!-- Modal -->
            <div class="modal fade" id="LoginModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
              <div class="modal-dialog" role="document">
                <div class="modal-content">
                  <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+                   <h5 class="modal-title" id="exampleModalLabel">Register</h5>
                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
                      <span aria-hidden="true">&times;</span>
                    </button>
@@ -81,7 +81,7 @@
                          </fieldset>
                  </div>
                  <div class="modal-footer">
-                       <button type="submit" class="btn btn-secondary" [disabled]="messageForm.invalid" (click)="createUser()">Register</button>
+                       <button type="submit" class="btn btn-secondary" [disabled]="messageForm.invalid">Register</button>
                        <button type="reset"  class="btn btn-secondary">Clear</button>
                  </div>
                </div>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +13,12 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './components/login/login/login.component';
-import { LogoutComponent } from'./components/logout/logout.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { RegisterComponent } from './components/register/register.component';
-
-
+import { SkinItemComponent } from './components/skin-item/skin-item.component';
+import { SkinItemListComponent } from './components/skin-item-list/skin-item-list.component';
+import { ErrorInterceptorService } from './service/error-interceptor.service';
+import { JwtInterceptorService } from './service/jwt-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -27,15 +29,20 @@ import { RegisterComponent } from './components/register/register.component';
     MenuComponent,
     LoginComponent,
     RegisterComponent,
-    LogoutComponent
+    SkinItemComponent,
+    SkinItemListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

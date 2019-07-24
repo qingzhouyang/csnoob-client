@@ -11,7 +11,11 @@ export class AuthGuardService {
               private authenticationService: AuthenticationService) { }
 
   canActivate(router: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-    // const currentUser = this.authenticationService.currentUserValue;
-
+    const currentUser = this.authenticationService.currentUserValue;
+    if(currentUser){
+      return true;
+    }
+    this.router.navigate(['header']);
+    return false;
   }
 }

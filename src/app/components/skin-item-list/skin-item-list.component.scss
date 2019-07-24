@@ -1,0 +1,11 @@
+.card-list-wrapper{
+    margin: auto;
+    max-width: 1400px;
+    min-width: 360px;
+    padding: 10px;
+    
+    //display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
