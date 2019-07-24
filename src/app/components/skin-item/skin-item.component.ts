@@ -17,7 +17,7 @@ export class SkinItemComponent implements OnInit {
   }
 
   imageNavFunction(){
-    this.router.navigate(['item',this.skinItem.id]);
+    this.router.navigate(['dashboard',this.skinItem.id]);
   }
 
 }
