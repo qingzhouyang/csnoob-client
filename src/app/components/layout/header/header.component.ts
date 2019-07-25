@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,9 +11,15 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
+  currentUser: User;
 
+  constructor(private authenticationService: AuthenticationService,
+              private router: Router,
+              public translate: TranslateService) {
+                
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+
+    translate.addLangs(['en', 'fr']);
     if (localStorage.getItem('language')) {
       translate.setDefaultLang(localStorage.getItem('language'));
       translate.use(localStorage.getItem('language'));
@@ -25,8 +34,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() { }
 
+
+  logout(){
+    this.authenticationService.logout();
+    this.router.navigate(['header']);
+  }
+
   langChanged(lang:string){
     localStorage.setItem("language",lang);
     this.translate.use(lang);
   }
+  
 }

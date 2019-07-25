@@ -13,23 +13,19 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
-
-//primeng modules
-import { MenubarModule } from 'primeng/components/menubar/menubar';
-import { ButtonModule } from 'primeng/components/button/button';
-import { fromEventPattern } from 'rxjs';
 import { RegisterComponent } from './components/register/register.component';
-
-
 import { SkinItemComponent } from './components/skin-item/skin-item.component';
 import { SkinItemListComponent } from './components/skin-item-list/skin-item-list.component';
-
-//translation modules
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ErrorInterceptorService } from './services/error-interceptor.service';
+import { JwtInterceptorService } from './services/jwt-interceptor.service';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { PriceChartComponent } from './components/dashboard/price-chart/price-chart.component';
+
+
+//translation modules
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -53,8 +49,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MenubarModule,
-    ButtonModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
@@ -66,7 +60,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

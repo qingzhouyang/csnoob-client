@@ -1,15 +1,9 @@
-
-      <!-- <div>
-        <button pButton label="Sign up" class="button-style"></button>
-        <button pButton label="Log in"  class="button-style"></button>
-      </div> -->
-
-
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
           <ul class="navbar-nav ml-auto">
              <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#LoginModal-1">{{'Register'|translate}}</a></li>
              <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#LoginModal-2">Log in</a></li>
+             <li class="nav-item"><a  class="nav-link" (click)="logout()" routerLink="header">Log out</a></li>
              <li class="nav-item"><a class="nav-link" routerLink="/more">More</a></li>
           </ul>
 
