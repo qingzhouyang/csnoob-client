@@ -16,15 +16,16 @@ import { MenuComponent } from './components/layout/menu/menu.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SkinItemComponent } from './components/skin-item/skin-item.component';
 import { SkinItemListComponent } from './components/skin-item-list/skin-item-list.component';
-import { ErrorInterceptorService } from './service/error-interceptor.service';
-import { JwtInterceptorService } from './service/jwt-interceptor.service';
+import { ErrorInterceptorService } from './services/error-interceptor.service';
+import { JwtInterceptorService } from './services/jwt-interceptor.service';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { PriceChartComponent } from './components/dashboard/price-chart/price-chart.component';
+
 
 //translation modules
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
-import { PriceChartComponent } from './components/dashboard/price-chart/price-chart.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
