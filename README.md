@@ -6,11 +6,6 @@
 - [x] footer
 - [x] side background
 - [x] item card
-<<<<<<< HEAD
-- [ ] item card list block
-- [ ] translation
-- [ ] item dashboard component
-=======
 - [x] item card list block
 - [ ] translation en/ch
 - [ ] add item dashboard component
@@ -18,7 +13,6 @@
 - [ ] add home component for routing
 - [ ] add boostrap module
 - [ ] remove primeng module
->>>>>>> 25d104b47b05edf227b8c2d0e2b7956e020c03d3
 
 - [ ] menu navigation router
 - [ ] http item request 
