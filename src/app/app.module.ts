@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { NgScrollbarModule } from 'ngx-scrollbar';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,7 +51,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgScrollbarModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
