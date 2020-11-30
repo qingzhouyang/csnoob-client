@@ -7,9 +7,17 @@
     padding: 10px;
     padding-left: 30px;
     
-    //display: flex;
- //   flex-wrap: wrap;
+  //   display: flex;
+  //  flex-wrap: wrap;
   //  justify-content: space-evenly;
     background-color: $gray-800;
+.add-url{
+
+  .form-control{
+    width: 70%;
+
+  }
+
+}
 
 }
