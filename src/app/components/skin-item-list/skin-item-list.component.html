@@ -1,6 +1,6 @@
 <div class="card-list-wrapper">
     <div class = 'add-url'>
-            <form class="form-inline" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <form class="form-inline" [formGroup]="urlForm" (ngSubmit)="onSubmit(urlForm.value)">
                     
                
                       <input class="form-control mr-sm-2" id="url" type="text" placeholder="URL" formControlName="url">
@@ -13,7 +13,8 @@
     <div class="row">
         <ng-container *ngFor='let skin of skins'>
             <div class="col-md-3">
-                <app-skin-item [skinItem]='skin'>
+                <app-skin-item [skinItem]='skin'
+                (output) = onDeleted($event)>
                 </app-skin-item>
             </div>
         </ng-container>
